@@ -58,11 +58,10 @@ export const postCatchPokemon = async (req, res) => {
   }
 };
 
-export const getMyPokemonList = (_, res) => {
+export const getMyPokemonList = async (req, res) => {
   try {
     const data = loadData();
     if (data.length === 0) return sendResponse(res, 404, "Data not found", null);
-
     return sendResponse(res, 200, "Success", data);
   } catch (error) {
     return handleServerError(res);

@@ -11,8 +11,8 @@ import {
 const router = express.Router();
 
 router.get("/pokemon", getPokemonList);
-router.get("/pokemon/:pokemonName", getPokemonDetail);
 router.get("/pokemon/myPokemonList", getMyPokemonList);
+router.get("/pokemon/:pokemonName", getPokemonDetail);
 
 router.post("/pokemon/catch/:pokemonName", postCatchPokemon);
 router.put("/pokemon/rename/:id", renamePokemon);
